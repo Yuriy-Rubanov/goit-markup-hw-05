@@ -517,6 +517,67 @@ section {
   background-color: #31d0aa;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+  margin-left: 80px;
+
+}
+
+.subscribe-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer-email {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: transparent;
+}
+
+.footer-email::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 16px;
+}
+
+.footer-subscribe-btn {
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-suscribe-icon {
+  display: flex;
+  fill: #fff;
+  margin-left: 16px;
+}
+
+/* modal window */
+
 .modal-overlay {
   display: flex;
   justify-content: center;
@@ -528,15 +589,17 @@ section {
   width: 100%;
   height: 100%;
   z-index: 999;
-  /* opacity: 0;
-  pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
-/* .modal-overlay.is-open {
+.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+}
 
 .modal {
   position: fixed;
@@ -648,12 +711,46 @@ section {
   padding-left: 16px;
 }
 
-.modal-checkbox {
+.modal-policy {
   margin-top: 16px;
 }
 
+.modal-checkbox {}
+
+.fake-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  fill: transparent;
+}
+
+.modal-vector {}
+
+.modal-check {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.check-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
 .send-button {
+  display: block;
   border-radius: 4px;
+  border: none;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
@@ -665,7 +762,11 @@ section {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin-top: 24px;
-  margin-left: 120px;
-  margin-bottom: 24px;
+  margin: 24px auto;
+}
+
+.modal-checkbox:checked+.modal-check .fake-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
