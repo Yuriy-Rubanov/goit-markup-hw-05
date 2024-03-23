@@ -668,7 +668,6 @@ section {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-top: 72px;
   margin-bottom: 16px;
 }
 
@@ -754,7 +753,7 @@ section {
 .modal-checkbox {}
 
 .fake-checkbox {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;
@@ -763,6 +762,9 @@ section {
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   fill: transparent;
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-vector {}
@@ -788,7 +790,7 @@ section {
   border-radius: 4px;
   border: none;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
@@ -800,7 +802,7 @@ section {
   color: #fff;
   margin: 24px auto;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked+.modal-check .fake-checkbox {
