@@ -622,8 +622,10 @@ section {
   transform: translateY(-50%);
 }
 
-.modal-form {
-  margin: 0 24px;
+.modal-form {}
+
+.modal-form-wrap {
+  margin-bottom: 8px;
 }
 
 .modal-exit {
@@ -632,7 +634,7 @@ section {
   right: 24px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
   padding: 0;
   width: 24px;
@@ -643,10 +645,8 @@ section {
   cursor: pointer;
 }
 
-.modal-exit:hover {
-  border: none;
-}
 
+.modal-exit:hover,
 .modal-exit:focus {
   border: none;
   background-color: #404bbf;
@@ -656,8 +656,8 @@ section {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon:hover,
-.modal-icon:focus {
+.modal-exit:hover>.modal-icon,
+.modal-exit:focus>.modal-icon {
   fill: #ffffff;
 }
 
